@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>    
+    <link rel="stylesheet" href="style.css">
+    <title>Firebase Crud</title>
+  </head>
+  <body>
+<!-- Heading -->
+        <div class="alert alert-primary" role="alert">
+             <center> Firebase Crud Operations <a href="#">click here</a></center> 
+        </div>
+        <hr>
+<!-- input forms -->
+   <div class="container top-box">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputId">Id</label>
+                        <input type="text" class="form-control" id="exampleInputUserId" aria-describedby="emailHelp" placeholder="Enter id">
+                        <small  class="checkId">please fill Id*</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputName">Name</label>
+                        <input type="text" class="form-control" id="exampleInputUserName" aria-describedby="emailHelp" placeholder="Enter name">
+                        <small  class="checkName">Please Enter Name</small>
+                    </div>
+                </div>
+             </div>
+    <!--------------------------------------------->         
+             <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputAge">age</label>
+                            <input type="Number" min="1" max="2" class="form-control" id="exampleInputUserAge" aria-describedby="emailHelp" placeholder="Enter age">
+                            <small  class="checkAge">Enter Age</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputCollageName">Collage Name</label>
+                            <input type="email" class="form-control" id="exampleInputUserCollageName" aria-describedby="emailHelp" placeholder="Enter college name">
+                            <small  class="checkCollege">Missing Collage Name</small>
+                         </div>
+                    </div>
+            </div>
+  <!--------------------------------------------->    
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="exampleInputLikes">Likes</label>
+                    <input type="Number" class="form-control" id="exampleInputUserLikes" aria-describedby="emailHelp" placeholder="Enter likes">
+                    <small  class="CheckLikes">Give some Like * </small>
+                </div>
+            </div>
+        </div>
+
+
+<!-- loader -->
+
+          <center>
+              <div class="spinner-border text-warning" role="status">
+              </div>
+            </center>
+        <br>
+        <!-- all buttons -->
+            <div class="button-group">
+                    <button class="btn btn-success submit">submit</button>
+                    <button class="btn btn-primary update">Update</button>
+                    <button class="btn btn-danger delete">Delete</button>
+            </div>
+        </form>
+   </div>
+<hr>
+
+<!-- display  Users -->
+
+   <div class="container users">
+        <ul class="list-group">
+              
+        </ul>
+   </div>
+   <script>
+    var config = {
+     // enter firebase configuration key
+    };
+    firebase.initializeApp(config);
+  
+  </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
